@@ -6,8 +6,13 @@ object  MethodNotations extends App {
     def likes(movie: String): Boolean = favMovie == movie
     def hangsOutWith(person: Person) = s"$name hangs out with ${person.name}"
     def +(person: Person) = s"$name hangs out with ${person.name}"
+    def +() = s"$name the rockstar"
+    def +(newName: String) = new Person(s"$name, $newName", favMovie)
     def isAlive: Boolean = true
-    def apply(): String = "Hi"
+    def apply(): String = s"Hi, I am $name"
+    def apply(n: Int): String = s"$name likes $favMovie and watched it $n times"
+    def learns(lang: String) = s"$name is learning $lang"
+    def learnsScala = this learns "Scala"
   }
 
   //infix notations
@@ -28,4 +33,9 @@ object  MethodNotations extends App {
   //apply
   println(chetan.apply)
   println(chetan())
+
+  println(new Person("Mary", "Agent 7").+())
+  println((chetan + "the rockstar").apply)
+  println(chetan learnsScala)
+  println(chetan(4))
 }
