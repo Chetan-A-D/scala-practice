@@ -1,4 +1,4 @@
-package lectures.funprog
+package lectures.part3funprog
 
 object AnonymousFunctions extends App {
 
@@ -22,23 +22,5 @@ object AnonymousFunctions extends App {
   println(list.flatMap((x: Int) => List(x, x+1)))
   println(list.flatMap(fun))
 
-  val numbers = List(1,2,3)
-  val chars = List('a','b','c')
-  val combinations = numbers.flatMap(n => chars.map(c => ""+ c + n))
-  println(combinations)
-  println(numbers.filter(_ % 2 == 0))
 
-  val colors = List("Black", "White")
-  val aComb = numbers.flatMap(n => chars.flatMap(c => colors.map(col => ""+ c + n + col)))
-  //above syntax is hard to read so below can be used
-  //for-comprehensions
-  val moreComb = for {
-    n <- numbers
-    c <- chars
-    col <- colors
-  } yield "" + c + n + col
-  println(moreComb)
-
-  val oddNums = for(n <- numbers if n % 2 != 0) yield n
-  println(oddNums)
 }

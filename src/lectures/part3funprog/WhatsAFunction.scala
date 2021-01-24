@@ -1,4 +1,4 @@
-package lectures.funprog
+package lectures.part3funprog
 
 object WhatsAFunction extends App {
 
