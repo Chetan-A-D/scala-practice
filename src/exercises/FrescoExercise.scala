@@ -50,9 +50,4 @@ object FrescoExercise extends App {
   }
   ListHigherOrder(3)
 
-  def mapHigherOrder(args: Array[Int]) {
-    val intList: List[Int] =
-  }
-
-
 }
